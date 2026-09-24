@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InterviewForge</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <div class="badge">LOCAL AI • QVAC</div>
+      <h1>InterviewForge</h1>
+      <p>Turn a job description into an interview battle plan.</p>
+    </header>
+
+    <section class="card">
+      <div class="grid">
+        <label>
+          Job / Role
+          <input id="role" placeholder="e.g. AI/ML Intern">
+        </label>
+
+        <label>
+          Experience Level
+          <select id="experienceLevel">
+            <option value="">Select level</option>
+            <option>Student / Fresher</option>
+            <option>Intern</option>
+            <option>Junior</option>
+            <option>Mid-level</option>
+            <option>Senior</option>
+          </select>
+        </label>
+      </div>
+
+      <label>
+        Job Description
+        <textarea id="jobDescription" rows="7" placeholder="Paste the job description here..."></textarea>
+      </label>
+
+      <div class="grid">
+        <label>
+          Skills to Test
+          <textarea id="skills" rows="4" placeholder="Python, machine learning, SQL, communication..."></textarea>
+        </label>
+
+        <label>
+          Weak Areas
+          <textarea id="weakAreas" rows="4" placeholder="e.g. system design, SQL joins, behavioral questions..."></textarea>
+        </label>
+      </div>
+
+      <div class="actions">
+        <button id="exampleBtn" class="secondary">Load Example</button>
+        <button id="clearBtn" class="secondary">Clear</button>
+        <button id="generateBtn">Build Interview Plan</button>
+      </div>
+
+      <div id="status"></div>
+    </section>
+
+    <section id="results" class="results hidden">
+      <div class="section">
+        <h2>Likely Questions</h2>
+        <div id="questions"></div>
+      </div>
+
+      <div class="section">
+        <h2>Technical Topics</h2>
+        <div id="topics"></div>
+      </div>
+
+      <div class="section">
+        <h2>Answer Guidance</h2>
+        <div id="answers"></div>
+      </div>
+
+      <div class="section">
+        <h2>Follow-Up Questions</h2>
+        <ul id="followups"></ul>
+      </div>
+
+      <div class="section">
+        <h2>Questions for the Interviewer</h2>
+        <ul id="interviewerQuestions"></ul>
+      </div>
+
+      <div class="section">
+        <h2>Preparation Checklist</h2>
+        <ul id="checklist"></ul>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
